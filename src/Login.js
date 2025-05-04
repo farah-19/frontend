@@ -38,11 +38,11 @@ const Login = () => {
 
       // Redirection en fonction du rôle
       if (role === 'admin') {
-        window.location.href = '/adminhome';  // Remplacer par ton chemin d'administration
+        window.location.href = '/admin';  // Remplacer par ton chemin d'administration
       } else if (role === 'medecin') {
-        window.location.href = '/medecinhome';  // Remplacer par ton chemin pour les médecins
+        window.location.href = '/medecin';  // Remplacer par ton chemin pour les médecins
       } else if (role === 'patient') {
-        window.location.href = '/patienthome';  // Remplacer par ton chemin pour les patients
+        window.location.href = '/patient';  // Remplacer par ton chemin pour les patients
       }
 
     } catch (error) {

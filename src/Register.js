@@ -15,7 +15,7 @@ function RegisterForm() {
     date_naissance: '',
     specialite_id: '',
     ville_id: '',
-    photo: null,
+    photo: '',
   });
   const [villes, setVilles] = useState([]);
   const [specialites, setSpecialites] = useState([]);
@@ -108,11 +108,6 @@ function RegisterForm() {
             <input type="file" name="photo" accept="image/*" required style={styles.input} onChange={handleChange} />
           </>
         )}
-
-        {formData.role !== 'medecin' && (
-          <input type="file" name="photo" accept="image/*" style={styles.input} onChange={handleChange} />
-        )}
-
         <button type="submit" style={styles.button}>S'inscrire</button>
       </form>
     </div>
