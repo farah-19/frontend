@@ -41,7 +41,7 @@ export default function Navbar() {
         <a href="/document" style={styles.link}>Document</a>
         <a href="/rendezvous" style={styles.link}>Rendez-vous</a>
         <a href="/dispo" style={styles.link}>Disponibilites</a>
-        <a href="/historique" style={styles.link}>Historique</a>
+        <a href="/histori" style={styles.link}>Historique</a>
       </div>
 
       <div style={styles.right}>

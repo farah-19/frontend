@@ -15,16 +15,21 @@ import MedecinHome from './Pages/Medecin/MedecinHome';
 import MedecinProfile from './Pages/Medecin/MedecinProfile';
 import MedecinOrdonnances from './Pages/Medecin/MedecinOrdonnances';
 import MedecinRendezvous from './Pages/Medecin/MedecinAppointmentList';
+import MedecinDisponibilites from './Pages/Medecin/MedecinDisponibilites';
+import MedecinHistorique from './Pages/Medecin/MedecinHistorique';
+import AdminHome from './Pages/Admin/AdminHome';
+import AdminProfile from './Pages/Admin/AdminProfile';
+import PatientsList from './Pages/Admin/AdminPatient';
+import Medecinlist from './Pages/Admin/AdminMedecin';
 
-// import LayoutMedecin from './Pages/Medecin/Layout';
-// import LayoutAdmin from './Pages/Admin/Layout'; 
-// import MedecinProfile from './Pages/Medecin/MedecinProfile';
-// import MedecinHome from './Pages/Medecin/MedecinHome';
-// import AdminHome from './Pages/Admin/AdminHome';
-// import AdminProfile from './Pages/Admin/AdminProfile';
-// import MedecinList from './Pages/Admin/MedecinList';
-// import PatientList from './Pages/Admin/PatientList';
-// import AppointmentList from './Pages/Admin/AppointmentList';
+
+// import AdminMedecin from './Pages/Admin/AdminMedecin';
+// import AdminPatient from './Pages/Admin/AdminPatient';
+import AdminRendezvous from './Pages/Admin/AdminAppointment';
+import OrdonnanceAdmin from './Pages/Admin/AdminOrdonnances';
+// import AdminHistorique from './Pages/Admin/AdminHistorique';
+import AdminLayout from './Pages/Admin/LayoutAdmin';
+import SpecialitesAndVillesManager from './Pages/Admin/AdminSpecVilles';
 
 function App() {
   return (
@@ -48,10 +53,28 @@ function App() {
           <Route path="profile" element={<MedecinProfile />} />  {/* C’est /medecin/profile */} 
           <Route path="document" element={<MedecinOrdonnances />} /> 
           <Route path="rendezvous" element={<MedecinRendezvous />} /> 
-          {/* <Route path="historique" element={<MedecinHistorique />} /> */}
+          <Route path="dispo" element={<MedecinDisponibilites />} />
+          <Route path="histori" element={<MedecinHistorique />} />
         </Route>  
-          {/* <Route path="profile" element={<MedecinProfile />} />  {/* C’est /medecin/profile */}
-          {/* <Route path="document" element={<MedecinDocument />} />  */}
+          
+          {/* admin */} 
+        <Route path="/admin" element={<AdminLayout />} >
+          <Route index element={<AdminHome />} /> 
+          <Route path="profile" element={<AdminProfile />} />
+          <Route path="document" element={<OrdonnanceAdmin />} />
+          <Route path="rendezvous" element={<AdminRendezvous />} />
+          <Route path="medecins" element={<Medecinlist />} />
+          <Route path="patients" element={<PatientsList />} />
+          <Route path="specville" element={<SpecialitesAndVillesManager />} />
+            {/* C’est /admin/profile */} 
+          {/* <Route path="medecins" element={<AdminMedecin />} /> 
+          <Route path="patients" element={<AdminPatient />} /> 
+          <Route path="rendezvous" element={<AdminRendezvous />} /> 
+          <Route path="ordonnances" element={<AdminOrdonnance />} /> 
+          <Route path="historique" element={<AdminHistorique />} /> */}
+        </Route>
+
+         
 
 
       </Routes>
