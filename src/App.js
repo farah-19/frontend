@@ -21,13 +21,9 @@ import AdminHome from './Pages/Admin/AdminHome';
 import AdminProfile from './Pages/Admin/AdminProfile';
 import PatientsList from './Pages/Admin/AdminPatient';
 import Medecinlist from './Pages/Admin/AdminMedecin';
-
-
-// import AdminMedecin from './Pages/Admin/AdminMedecin';
-// import AdminPatient from './Pages/Admin/AdminPatient';
+import SettingManager from './Pages/Admin/AdminParams';
 import AdminRendezvous from './Pages/Admin/AdminAppointment';
 import OrdonnanceAdmin from './Pages/Admin/AdminOrdonnances';
-// import AdminHistorique from './Pages/Admin/AdminHistorique';
 import AdminLayout from './Pages/Admin/LayoutAdmin';
 import SpecialitesAndVillesManager from './Pages/Admin/AdminSpecVilles';
 
@@ -66,12 +62,7 @@ function App() {
           <Route path="medecins" element={<Medecinlist />} />
           <Route path="patients" element={<PatientsList />} />
           <Route path="specville" element={<SpecialitesAndVillesManager />} />
-            {/* C’est /admin/profile */} 
-          {/* <Route path="medecins" element={<AdminMedecin />} /> 
-          <Route path="patients" element={<AdminPatient />} /> 
-          <Route path="rendezvous" element={<AdminRendezvous />} /> 
-          <Route path="ordonnances" element={<AdminOrdonnance />} /> 
-          <Route path="historique" element={<AdminHistorique />} /> */}
+          <Route path="settings" element={<SettingManager />} />
         </Route>
 
          
